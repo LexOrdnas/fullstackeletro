@@ -1,0 +1,46 @@
+:root {
+    font-size: 90%; /* controle das medidas rem */
+}
+
+$background-color: #ffffff;
+$light-primary-color: #e7566e;
+$primary-color: #D90429;
+$dark-primary-color: #b90523;
+$secondary-color: #8D99AE;
+$dark-secondary-color: #2B2D42;
+$title-color: #2B2D42;
+$general-text-color: #5a5a5a;
+$light-general-text-color: #ececec;
+$separation-line-color: #f0e6e6;
+$button-text-color: #FFFFFF;
+$card-color: #721e1e;
+$footer-color: #f0f0f0;
+$info-color: #ccbcbc;
+$preview-color: #dddddd;
+
+@import 'partials/base';
+@import 'partials/menu';
+@import 'partials/button';
+@import 'partials/category';
+@import 'partials/forms';
+@import 'partials/image';
+@import 'partials/main-content';
+@import 'partials/separator';
+@import 'partials/spacer';
+@import 'partials/text';
+@import 'partials/footer';
+
+/* Bloco de Boas vindas do site */
+.welcome {
+    padding-top: 50px;
+    text-align: center;
+    background-color: $background-color;
+    h2 {
+        padding-bottom: 10px;
+        font-size: 1.8rem;
+    }
+    p {
+        padding-bottom: 20px;
+        font-size: 1.4rem;
+    }
+}

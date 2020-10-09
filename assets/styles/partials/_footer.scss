@@ -1,0 +1,82 @@
+/* Formas de Pagamento */
+#forms-payment {
+    background-color: $background-color;
+    text-align: center;
+    padding: 50px 0px 20px 0px;
+    /* Texto Formas de Pagamento */
+    .featured-text {
+        color: $dark-primary-color;
+        font-size: 1.6rem;
+        padding-bottom: 20px;
+    }
+}
+/* Endereço */
+#address {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 20%;
+    max-width: 100%;
+    margin: 0 auto;
+    grid-gap: 10px;
+    background-color: $footer-color;
+}
+/* Tamanho dos blocos de Endereço */
+.locality {
+    width: 33%;
+}
+/* Contatos */
+#contact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    max-width: 100%;
+    margin: 0 auto;
+    grid-gap: 0px;
+    background-color: $footer-color;
+    place-items: center;
+}
+/* Tamanho dos blocos de Endereço */
+#contact div {
+    width: 25%;
+}
+/* Imagens de Endereço */
+#contact img {
+    width: 50px;
+    height: 50px;
+}
+/* Rodapé */
+#bottom-footer {
+    background-color: $light-primary-color;
+    text-align: center;
+    padding: 10px 0px 10px 0px;
+    color: $button-text-color;
+}
+/* Paginação */
+.pagination {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    padding-top: 100px;
+    /* Links de Paginação */
+}
+.pagination a {
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    border: 1px solid #ddd;
+    margin: 0 4px;
+}
+/* Quando os links são ativados */
+.pagination a.active {
+    background-color: $light-primary-color;
+    color: white;
+    border: 1px solid $light-primary-color;
+}
+/* Ao mover o mouse sobre os links */
+.pagination a:hover:not(.active) {
+    background-color: rgb(233, 233, 233);
+}

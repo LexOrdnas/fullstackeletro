@@ -1,0 +1,75 @@
+#header {
+    /*display: flex;*/
+    height: 90px;
+    width: 100%;
+    background-color: $light-primary-color;
+    /* Padrão */
+    ul {
+        list-style: none;
+        font-size: 1.2rem;
+    }
+    /* Menu Fixo */
+    #menu-fixed {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: fixed;
+        z-index: 999;
+        left: 0%;
+        right: 0%;
+        top: 0;
+        overflow: hidden;
+        height: 60px;
+        background-color: $light-primary-color;
+        /* Lista de links do menu fixo */
+        #top-menu-list {
+            ul{
+                li {
+                    justify-content: center;
+                    display: inline-block;
+                }
+                a {
+                    width: 50px;
+                    color: $light-general-text-color;
+                    text-decoration: none;
+                    font-size: 1.2rem;
+                }
+                i{
+                    padding: 10px;
+                }
+            }
+        }  
+    }
+    /* Estilo da lista do menu */
+    #main-menu {
+        #button-menu-list i {
+            padding: 10px;
+        }
+        ul {
+            padding-top: 50px;
+            z-index: 999;
+            margin: 0px;
+            list-style: none;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            a {
+                padding: 5px 5px 5px 5px;
+                margin-right: 40px;
+                /* visual do link */
+                color: $light-general-text-color;
+                text-decoration: none;
+                font-size: 1.2rem;
+                &:hover {
+                    color: $button-text-color;
+                }
+            }
+        }
+    }
+}
+
+/* Separador do links principal da lista */
+.divider-li {
+    padding-right: 15%;
+}

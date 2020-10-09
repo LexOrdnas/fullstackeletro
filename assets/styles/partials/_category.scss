@@ -1,0 +1,32 @@
+/* Categoria de Produtos */
+#category {
+    display: flex;
+    float: left;
+    min-height: 300px;
+    width: 250px;
+    padding: 100px 0px 0px 100px;
+    /* Titulo do bloco de Categorias */
+    .title-category {
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        padding-bottom: 15px;
+    }
+    /* Configuração da lista de Categorias */
+    .list-category {
+        text-decoration: none;
+        list-style: none;
+        /* Elementos da categoria */
+        .itens-category {
+            padding: 15px 0px 10px 0px;
+            color: general-text-color;
+            padding-left: 10px;
+            cursor: pointer;
+            font-weight: 500;
+        
+            &:hover {
+                color: $primary-color;
+                text-decoration: underline;
+            }
+        }
+    }
+}

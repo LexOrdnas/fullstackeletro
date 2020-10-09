@@ -1,0 +1,51 @@
+/* Separador Pequeno */
+.separator-small {
+    padding: 30px 0px;
+    background-color: $background-color;
+}
+/* Separador Médio */
+.separator-medium {
+    padding: 50px 0px;
+    background-color: $background-color;
+}
+/* Separador Grande */
+.separator-large {
+    padding: 100px 0px;
+    background-color: $background-color;
+}
+/* Separador dom Imagem */
+.separator-image {
+    padding: 50px 0;
+    background-color: $background-color;
+    text-align: center;
+    transition: all 0.5s;
+}
+
+/* Imagem do separador */
+.separator-image-index img {
+    width: 50%;
+    height: 600px;
+    opacity: 0.8;
+    border-radius: 10px;
+}
+
+.price-separator {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(119, 119, 119, 0.75), rgba(0, 0, 0, 0));
+}
+
+.box {
+    float: right;
+    margin-left: 30px;
+    height: 300px; /*Altura da linha*/
+}
+
+.linha-vertical {
+    display: flex;
+    border: 0;
+    height: 600px; /*Altura da linha*/
+    width: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(119, 119, 119, 0.534), rgba(0, 0, 0, 0));
+    box-sizing: border-box;
+}

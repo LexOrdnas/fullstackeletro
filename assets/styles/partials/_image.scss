@@ -1,0 +1,35 @@
+/* Imagem ao lado do Formulário */
+.image-form img {
+  object-fit: cover;
+  width: 100%;
+
+  border-radius: 5px 0px 0px 5px;
+  opacity: 0.9;
+}
+/* Image de Formas de Pagamento */
+.image-form-of-payment {
+  width: 600px;
+  height: 100px;
+}
+
+.carousel {
+  background: $background-color;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.carousel-cell {
+  width: 66%;
+  height: 300px;
+  margin-right: 100px;
+  background-color: $preview-color;;
+  border-radius: 5px;
+  background-position: center center;
+  background-size: cover;
+}
+
+@media screen and (min-width: 768px) {
+  .carousel-cell img {
+    height: 400px;
+  }
+}

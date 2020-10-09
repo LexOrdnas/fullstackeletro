@@ -1,0 +1,57 @@
+/* Conteúdo principal */
+#main-content {
+    display: grid; /* Tipo de exibição do conteúdo */
+    grid-template-columns: repeat(4, 3fr); /* 4 elementos horizontais e 3 verticais */
+    max-width: 70%;
+    padding-top: 70px;
+    padding-left: 50px;
+    margin: 0 auto;
+    grid-gap: 100px 2px; /* Espaço entre os elementos */
+    /* Bloco do Produto*/
+    .block-product {
+        display: block;
+        height: 350px;
+        width: 250px;
+        padding-top: 30px;
+        text-align: center;
+        background-color: $background-color;
+        cursor: pointer;
+        border-radius: 2px;
+        &:hover {
+            transition: 0.5s;
+            -webkit-box-shadow: 5px 5px 30px 5px rgba(99, 99, 99, 0.3);
+            box-shadow: 5px 5px 30px 5px rgba(99, 99, 99, 0.3);
+        }
+        /* Imagem do Produto */
+        .product-image {
+            width: 150px;
+            height: 150px;
+            padding-bottom: 10px;
+            &:hover {
+                opacity: 0.9;
+            }
+        }
+        /* Titulo do Produto */
+        .product-title {
+            font-size: 1.2rem;
+            padding-bottom: 10px;
+        }
+        /* Bloco do Preço do Produto */
+        .price-block {
+            padding: 10px 0px;
+            p {
+                padding-bottom: 5px;
+            }
+            /* texto de valor antigo do produto */
+            .strike {
+                text-decoration: line-through;
+                font-size: 0.9rem;
+                text-align: center;
+            }
+        }
+        .sub-text {
+            padding-top: 10px;
+            font-size: 0.9rem;
+        }
+    }
+}
