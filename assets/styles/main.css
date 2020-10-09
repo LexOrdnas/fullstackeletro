@@ -144,7 +144,7 @@ body {
   display: flex;
   float: left;
   min-height: 300px;
-  width: 250px;
+  width: 15%;
   padding: 100px 0px 0px 100px;
   /* Titulo do bloco de Categorias */
   /* Configuração da lista de Categorias */
@@ -193,11 +193,12 @@ button {
   display: -ms-grid;
   display: grid;
   /* Tipo de exibição */
-  -ms-grid-columns: (1fr);
+  -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
   /* 2 elementos na horizontal emm 1 vertical */
   padding-bottom: 20px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 980px;
   margin: 0 auto;
   grid-gap: 0px;
   background-color: #ffffff;
@@ -358,24 +359,31 @@ label.checkbox {
   }
 }
 
-/* Conteúdo principal */
-#main-content {
+#main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+#main main {
+  width: 100%;
+  margin-left: 5%;
+}
+
+#main #main-content {
   display: -ms-grid;
   display: grid;
   /* Tipo de exibição do conteúdo */
-  -ms-grid-columns: (3fr);
+  -ms-grid-columns: (3fr)[4];
       grid-template-columns: repeat(4, 3fr);
   /* 4 elementos horizontais e 3 verticais */
-  max-width: 70%;
-  padding-top: 70px;
-  padding-left: 50px;
-  margin: 0 auto;
-  grid-gap: 100px 2px;
+  grid-gap: 100px 50px;
   /* Espaço entre os elementos */
   /* Bloco do Produto*/
 }
 
-#main-content .block-product {
+#main #main-content .block-product {
   display: block;
   height: 350px;
   width: 250px;
@@ -383,50 +391,50 @@ label.checkbox {
   text-align: center;
   background-color: #ffffff;
   cursor: pointer;
-  border-radius: 2px;
+  border-radius: 5px;
   /* Imagem do Produto */
   /* Titulo do Produto */
   /* Bloco do Preço do Produto */
 }
 
-#main-content .block-product:hover {
+#main #main-content .block-product:hover {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   -webkit-box-shadow: 5px 5px 30px 5px rgba(99, 99, 99, 0.3);
   box-shadow: 5px 5px 30px 5px rgba(99, 99, 99, 0.3);
 }
 
-#main-content .block-product .product-image {
+#main #main-content .block-product .product-image {
   width: 150px;
   height: 150px;
   padding-bottom: 10px;
 }
 
-#main-content .block-product .product-image:hover {
+#main #main-content .block-product .product-image:hover {
   opacity: 0.9;
 }
 
-#main-content .block-product .product-title {
+#main #main-content .block-product .product-title {
   font-size: 1.2rem;
   padding-bottom: 10px;
 }
 
-#main-content .block-product .price-block {
+#main #main-content .block-product .price-block {
   padding: 10px 0px;
   /* texto de valor antigo do produto */
 }
 
-#main-content .block-product .price-block p {
+#main #main-content .block-product .price-block p {
   padding-bottom: 5px;
 }
 
-#main-content .block-product .price-block .strike {
+#main #main-content .block-product .price-block .strike {
   text-decoration: line-through;
   font-size: 0.9rem;
   text-align: center;
 }
 
-#main-content .block-product .sub-text {
+#main #main-content .block-product .sub-text {
   padding-top: 10px;
   font-size: 0.9rem;
 }
@@ -549,7 +557,7 @@ h6 {
 #address {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr);
+  -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
   padding-top: 50px;
   padding-bottom: 50px;
@@ -569,7 +577,7 @@ h6 {
 #contact {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr);
+  -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
   padding-top: 20px;
   padding-bottom: 20px;

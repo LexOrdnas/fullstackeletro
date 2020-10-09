@@ -14,7 +14,8 @@ button {
     display: grid; /* Tipo de exibição */
     grid-template-columns: repeat(2, 1fr); /* 2 elementos na horizontal emm 1 vertical */
     padding-bottom: 20px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 980px;
     margin: 0 auto;
     grid-gap: 0px;
     background-color: $background-color;
