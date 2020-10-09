@@ -10,7 +10,8 @@
     #main-content {
         display: grid; /* Tipo de exibição do conteúdo */
         grid-template-columns: repeat(4, 3fr); /* 4 elementos horizontais e 3 verticais */
-        grid-gap: 100px 50px; /* Espaço entre os elementos */
+        grid-gap: 50px 50px; /* Espaço entre os elementos */
+        margin-top: 70px;
         /* Bloco do Produto*/
         .block-product {
             display: block;

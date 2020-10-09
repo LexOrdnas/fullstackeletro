@@ -142,10 +142,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  float: left;
   min-height: 300px;
-  width: 15%;
-  padding: 100px 0px 0px 100px;
+  width: 25%;
+  padding: 130px 0px 0px 100px;
   /* Titulo do bloco de Categorias */
   /* Configuração da lista de Categorias */
 }
@@ -378,8 +377,9 @@ label.checkbox {
   -ms-grid-columns: (3fr)[4];
       grid-template-columns: repeat(4, 3fr);
   /* 4 elementos horizontais e 3 verticais */
-  grid-gap: 100px 50px;
+  grid-gap: 50px 50px;
   /* Espaço entre os elementos */
+  margin-top: 70px;
   /* Bloco do Produto*/
 }
 
