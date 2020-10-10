@@ -14,10 +14,16 @@ let showAll = () => {
     for (var i = 0; i < elements.length; i++) {elements[i].style = "display:block";}
 }
 
-let highlightImage = (img) => {
-    if (img.width == 150) {
-        img.width = 100;
-    } else {
-        img.width = 150;
-    }
+function noPageExists(alert) {
+    alert('A pagina ainda não existe...');
+}
+
+function colorChangeOver(x) {
+x.style.backgroundColor = "#e7566e";
+x.style.color = "white";
+}
+
+function colorChangeOut(x) {
+x.style.backgroundColor = "white";
+x.style.color = "black";
 }

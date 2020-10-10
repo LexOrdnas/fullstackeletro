@@ -193,7 +193,7 @@ button {
   display: -ms-grid;
   display: grid;
   /* Tipo de exibição */
-  -ms-grid-columns: (1fr);
+  -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
   /* 2 elementos na horizontal emm 1 vertical */
   padding-bottom: 20px;
@@ -363,7 +363,7 @@ label.checkbox {
   display: -ms-grid;
   display: grid;
   /* Tipo de exibição do conteúdo */
-  -ms-grid-columns: (3fr);
+  -ms-grid-columns: (3fr)[4];
       grid-template-columns: repeat(4, 3fr);
   /* 4 elementos horizontais e 3 verticais */
   max-width: 70%;
@@ -383,7 +383,7 @@ label.checkbox {
   text-align: center;
   background-color: #ffffff;
   cursor: pointer;
-  border-radius: 2px;
+  border-radius: 7px;
   /* Imagem do Produto */
   /* Titulo do Produto */
   /* Bloco do Preço do Produto */
@@ -399,7 +399,8 @@ label.checkbox {
 #main-content .block-product .product-image {
   width: 150px;
   height: 150px;
-  padding-bottom: 10px;
+  border-radius: 7px;
+  margin-bottom: 10px;
 }
 
 #main-content .block-product .product-image:hover {
@@ -549,7 +550,7 @@ h6 {
 #address {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr);
+  -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
   padding-top: 50px;
   padding-bottom: 50px;
@@ -569,7 +570,7 @@ h6 {
 #contact {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr);
+  -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
   padding-top: 20px;
   padding-bottom: 20px;
