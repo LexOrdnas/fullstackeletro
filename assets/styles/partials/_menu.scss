@@ -1,6 +1,6 @@
 #header {
     /*display: flex;*/
-    height: 90px;
+    height: 100px;
     width: 100%;
     background-color: $light-primary-color;
     /* Padrão */
@@ -21,6 +21,24 @@
         overflow: hidden;
         height: 60px;
         background-color: $light-primary-color;
+        // Logo 
+        .logo {
+            width: 150px;
+        }
+        h1 {
+            font-size: 0;
+        }
+        // Botão menu
+        .btn-menu {
+            display: none;
+            width: 55px;
+            height: 55px;
+            float: right;
+            text-align: center;
+            color: white;
+            background-color: $light-primary-color;
+            cursor: pointer;
+        }
         /* Lista de links do menu fixo */
         #top-menu-list {
             ul{
@@ -33,6 +51,7 @@
                     color: $light-general-text-color;
                     text-decoration: none;
                     font-size: 1.2rem;
+                    margin-left: 20px;
                 }
                 i{
                     padding: 10px;
@@ -46,7 +65,7 @@
             padding: 10px;
         }
         ul {
-            padding-top: 50px;
+            padding-top: 60px;
             z-index: 999;
             margin: 0px;
             list-style: none;
@@ -56,7 +75,7 @@
             align-items: center;
             a {
                 padding: 5px 5px 5px 5px;
-                margin-right: 40px;
+                margin-right: 20px;
                 /* visual do link */
                 color: $light-general-text-color;
                 text-decoration: none;

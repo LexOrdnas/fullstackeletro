@@ -99,6 +99,7 @@ label.checkbox {
 
 .search-container {
     width: 40%;
+    min-width: 200px;
 }
 
 .search-container form {
@@ -116,7 +117,6 @@ label.checkbox {
 
 #header .search-container button {
     padding: 6px 10px;
-
     margin-right: 16px;
     background: $background-color;
     font-size: 17px;

@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Full Stack Eleto</title>
+    <title>Full Stack Eleto - Eletrodomésticos</title>
+    <meta name="description" content="Site para avaliação individual da Recode Pro 2020">
+    <meta name="keywords" content="Full Stack Eletro, Recode Pro 2020">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Alexsandro da Silva Marques">
     <!-- Ícone do Site -->
     <link rel="shortcut icon" href="../assets/image/icons/stop-red-icon.png" type="image/png">
     <!-- Estilos CSS -->
@@ -15,9 +19,11 @@
 <body>
     <!-- Inicio do Cabeçalho -->
     <header id="header">
-        <!-- Inicio do Menu Fixo -->
+        <!-- Inicio do Menu Fixo 
+        <img src="../assets/image/logo.png" alt="logo" width="150">-->
         <div id="menu-fixed">
-            <a href="index.html"><img src="../assets/image/logo.png" alt="logo" width="150"></a>
+            <a href="index.html"> <img class="logo" src="./../assets/image/logo.png" alt="Full Stack Eletro" title="Full Stack Eletro"><h1>Full Stack Eletro</h1></a>
+            <button class="btn-menu"><i class="fa fa-bars fa-lg"></i></button>
             <div class="search-container">
                 <form action="#">
                   <input type="text" placeholder="Buscar.." name="search">
@@ -26,9 +32,9 @@
               </div>
               <nav id="top-menu-list">
                 <ul>
-                    <li><a href="#"><i class="fas fa-user-circle"></i><span style="text-decoration: underline;">Entrar</span></a></li>
-                    <li><a href="#"><i class="fas fa-star"></i>Favoritos</a></li>
-                    <li><a href="#"><i class="fas fa-shopping-cart"></i>Carrinho</a></li>
+                    <li><a href="#"><i class="fas fa-user-circle" onmouseover="changeIconeColor(this)" onmouseout="backIconeColor(this)"></i><span style="text-decoration: underline;">Entrar</span></a></li>
+                    <li><a href="#"><i class="fas fa-star" onmouseover="changeIconeColor(this)" onmouseout="backIconeColor(this)"></i>Favoritos</a></li>
+                    <li><a href="#"><i class="fas fa-shopping-cart" onmouseover="changeIconeColor(this)" onmouseout="backIconeColor(this)"></i>Carrinho</a></li>
                 </ul>
               </nav>
         </div>
@@ -37,9 +43,9 @@
         <div id="main-menu">    
             <nav id="button-menu-list">
                 <ul>
-                    <li><a href="product.html"><i class="fas fa-boxes"></i>Produtos</a></li>
-                    <li><a href="our-stores.html"><i class="fas fa-store"></i>Nossas lojas</a></li>
-                    <li class="right-spacer"><a href="contact.html"><i class="fas fa-address-card"></i>Contato</a></li>
+                    <li><a href="product.html"><i class="fas fa-boxes" onmouseover="changeIconeColor(this)" onmouseout="backIconeColor(this)"></i>Produtos</a></li>
+                    <li><a href="our-stores.html"><i class="fas fa-store" onmouseover="changeIconeColor(this)" onmouseout="backIconeColor(this)"></i>Nossas lojas</a></li>
+                    <li class="right-spacer"><a href="contact.html"><i class="fas fa-address-card" onmouseover="changeIconeColor(this)" onmouseout="backIconeColor(this)"></i>Contato</a></li>
                 </ul>
             </nav>
         </div>
@@ -118,6 +124,7 @@
         </footer>
         <!-- Fim do Rodapé -->
         <script src="https://kit.fontawesome.com/9fd7b899ce.js" crossorigin="anonymous"></script>
+        <script src="../assets/scripts/function.js"></script>
         <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
         <script src="https://unpkg.com/flickity-bg-lazyload@1/bg-lazyload.js"></script>
 </body>

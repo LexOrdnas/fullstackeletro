@@ -1,17 +1,16 @@
 /* Conteúdo principal */
 #main-content {
     display: grid; /* Tipo de exibição do conteúdo */
-    grid-template-columns: repeat(4, 3fr); /* 4 elementos horizontais e 3 verticais */
-    max-width: 70%;
+    grid-template-columns: repeat(3, 4fr); /* 4 elementos horizontais e 3 verticais */
+    max-width: 980px;
     padding-top: 70px;
-    padding-left: 50px;
-    margin: 0 auto;
-    grid-gap: 100px 2px; /* Espaço entre os elementos */
+    margin: auto 450px;
+    grid-gap: 50px 100px; /* Espaço entre os elementos */
     /* Bloco do Produto*/
     .block-product {
         display: block;
-        height: 350px;
-        width: 250px;
+        height: 400px;
+        width: 280px;
         padding-top: 30px;
         text-align: center;
         background-color: $background-color;
