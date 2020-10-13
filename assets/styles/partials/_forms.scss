@@ -96,36 +96,3 @@ select,
 label.checkbox {
     cursor: pointer;
 }
-
-.search-container {
-    width: 40%;
-    min-width: 200px;
-}
-
-.search-container form {
-    text-align: center;
-}
-
-#header input[type="text"] {
-    padding: 6px;
-    font-size: 17px;
-    border: none;
-    border-radius: 5px;
-    width: 80%;
-    outline: none;
-}
-
-#header .search-container button {
-    padding: 6px 10px;
-    margin-right: 16px;
-    background: $background-color;
-    font-size: 17px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    outline: none;
-}
-
-#header .search-container button:hover {
-    background: rgb(233, 232, 232);
-}

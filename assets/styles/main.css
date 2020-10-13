@@ -76,14 +76,14 @@ body {
   cursor: pointer;
 }
 
-#header #menu-fixed #top-menu-list ul li {
+#header #menu-fixed #top-menu ul li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   display: inline-block;
 }
 
-#header #menu-fixed #top-menu-list ul a {
+#header #menu-fixed #top-menu ul a {
   width: 50px;
   color: #ececec;
   text-decoration: none;
@@ -91,11 +91,11 @@ body {
   margin-left: 20px;
 }
 
-#header #menu-fixed #top-menu-list ul i {
+#header #menu-fixed #top-menu ul i {
   padding: 10px;
 }
 
-#header #main-menu #button-menu-list i {
+#header #main-menu #bottom-menu i {
   padding: 10px;
 }
 
@@ -132,6 +132,52 @@ body {
 /* Separador do links principal da lista */
 .divider-li {
   padding-right: 15%;
+}
+
+.search-container {
+  width: 40%;
+  min-width: 200px;
+}
+
+.search-container form {
+  text-align: center;
+}
+
+#header input[type="text"] {
+  padding: 6px;
+  font-size: 17px;
+  border: none;
+  border-radius: 5px;
+  width: 80%;
+  outline: none;
+}
+
+#header .search-container button {
+  padding: 6px 10px;
+  margin-right: 16px;
+  background: #ffffff;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  outline: none;
+}
+
+#header .search-container button:hover {
+  background: #e9e8e8;
+}
+
+@media screen and (max-width: 980px) {
+  #header {
+    display: inline;
+    height: 50px;
+  }
+  #main-menu, #top-menu, .search-container {
+    display: none;
+  }
+  #header #menu-fixed .btn-menu {
+    display: block;
+  }
 }
 
 /* Botão geral */
@@ -217,7 +263,7 @@ button {
   display: -ms-grid;
   display: grid;
   /* Tipo de exibição */
-  -ms-grid-columns: (1fr)[2];
+  -ms-grid-columns: (1fr);
       grid-template-columns: repeat(2, 1fr);
   /* 2 elementos na horizontal emm 1 vertical */
   padding-bottom: 20px;
@@ -313,39 +359,6 @@ label.checkbox {
   cursor: pointer;
 }
 
-.search-container {
-  width: 40%;
-  min-width: 200px;
-}
-
-.search-container form {
-  text-align: center;
-}
-
-#header input[type="text"] {
-  padding: 6px;
-  font-size: 17px;
-  border: none;
-  border-radius: 5px;
-  width: 80%;
-  outline: none;
-}
-
-#header .search-container button {
-  padding: 6px 10px;
-  margin-right: 16px;
-  background: #ffffff;
-  font-size: 17px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  outline: none;
-}
-
-#header .search-container button:hover {
-  background: #e9e8e8;
-}
-
 /* Imagem ao lado do Formulário */
 .image-form img {
   -o-object-fit: cover;
@@ -388,7 +401,7 @@ label.checkbox {
   display: -ms-grid;
   display: grid;
   /* Tipo de exibição do conteúdo */
-  -ms-grid-columns: (4fr)[3];
+  -ms-grid-columns: (4fr);
       grid-template-columns: repeat(3, 4fr);
   /* 4 elementos horizontais e 3 verticais */
   max-width: 980px;
@@ -574,7 +587,7 @@ h6 {
 #address {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
+  -ms-grid-columns: (1fr);
       grid-template-columns: repeat(3, 1fr);
   padding-top: 50px;
   padding-bottom: 50px;
@@ -594,7 +607,7 @@ h6 {
 #contact {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
+  -ms-grid-columns: (1fr);
       grid-template-columns: repeat(2, 1fr);
   padding-top: 20px;
   padding-bottom: 20px;

@@ -40,7 +40,7 @@
             cursor: pointer;
         }
         /* Lista de links do menu fixo */
-        #top-menu-list {
+        #top-menu {
             ul{
                 li {
                     justify-content: center;
@@ -61,7 +61,7 @@
     }
     /* Estilo da lista do menu */
     #main-menu {
-        #button-menu-list i {
+        #bottom-menu i {
             padding: 10px;
         }
         ul {
@@ -91,4 +91,50 @@
 /* Separador do links principal da lista */
 .divider-li {
     padding-right: 15%;
+}
+
+.search-container {
+    width: 40%;
+    min-width: 200px;
+}
+
+.search-container form {
+    text-align: center;
+}
+
+#header input[type="text"] {
+    padding: 6px;
+    font-size: 17px;
+    border: none;
+    border-radius: 5px;
+    width: 80%;
+    outline: none;
+}
+
+#header .search-container button {
+    padding: 6px 10px;
+    margin-right: 16px;
+    background: $background-color;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+}
+
+#header .search-container button:hover {
+    background: rgb(233, 232, 232);
+}
+
+@media screen and (max-width: 980px) {
+    #header {
+        display: inline;
+        height: 50px;
+    }
+    #main-menu, #top-menu, .search-container {
+        display: none;
+    }
+    #header #menu-fixed .btn-menu {
+        display: block;
+    }
 }
