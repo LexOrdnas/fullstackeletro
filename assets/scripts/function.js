@@ -25,11 +25,11 @@ x.style.color = "white";
 
 function colorChangeOut(x) {
 x.style.backgroundColor = "white";
-x.style.color = "black";
+x.style.color = "#5a5a5a";
 }
 
 function changeIconeColor(product) {
-    product.style.color = "black";
+    product.style.color = "#5a5a5a";
 }
 
 function backIconeColor(product) {
