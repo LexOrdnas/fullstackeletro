@@ -37,6 +37,9 @@
     <link rel="stylesheet" href="../assets/styles/main.css">
     <!-- Links da Fonte Padrão no site da Google -->
     <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <!-- JavaScript -->
+    <script src="../assets/scripts/function.js" defer></script>
+    <script src="https://kit.fontawesome.com/9fd7b899ce.js" crossorigin="anonymous" defer></script>
 </head>
 <body>
     <!-- Inicio do Cabeçalho -->
@@ -222,7 +225,5 @@
         <!-- Fim de Contatos -->
         </footer>
         <!-- Fim do Rodapé -->
-        <cript src="../assets/scripts/function.js"></cript>
-        <cript src="https://kit.fontawesome.com/9fd7b899ce.js" crossorigin="anonymous"></cript>
 </body>
 </html>
