@@ -1,3 +1,30 @@
+<?php
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $database = "fseletro";
+
+    // Criando a conexão
+    $con = mysqli_connect($servername, $username, $password, $database) or die ("Erro de conexão");
+
+    //if(isset($_POST['nome']) && isset($_POST['snome']) && isset($_POST['email']) && isset($_POST['telefone']) && isset($_POST['mensagem'])){
+
+        if(isset($_POST['submit'])){
+            $nome = $_POST['nome'];
+            $snome = $_POST['snome'];
+            $sexo = $_POST['sexo'];
+            $email = $_POST['email'];
+            $telefone = $_POST['telefone'];
+            $cidade = $_POST['cidade'];
+            $estado = $_POST['estado'];
+            $mensagem = $_POST['mensagem'];
+            //$mensagem = $_POST['mensagem'];
+            $query = mysqli_query($con, "INSERT INTO contact (nome,snome,sexo,email,telefone,cidade,estado,mensagem) VALUES ('$nome', '$snome', '$sexo', '$email', '$telefone', '$cidade', '$estado', '$mensagem')");
+        }
+
+    //}
+
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -13,39 +40,9 @@
 </head>
 <body>
     <!-- Inicio do Cabeçalho -->
-    <header id="header">
-        <!-- Inicio do Menu Fixo 
-        <img src="../assets/image/logo.png" alt="logo" width="150">-->
-        <div id="menu-fixed">
-            <a href="index.html"> <img class="logo" src="./../assets/image/logo.png" alt="Full Stack Eletro" title="Full Stack Eletro"><h1>Full Stack Eletro</h1></a>
-            <button class="btn-menu"><i class="fa fa-bars fa-lg"></i></button>
-            <div class="search-container">
-                <form action="#">
-                  <input type="text" placeholder="Buscar.." name="search">
-                  <button type="submit"><i class="fas fa-search"></i></button>
-                </form>
-              </div>
-              <nav id="top-menu">
-                <ul>
-                    <li><a href="#"><i class="fas fa-user-circle" onmouseover="changeIconeColor(this)" onmouseout="backIconeColor(this)"></i><span style="text-decoration: underline;">Entrar</span></a></li>
-                    <li><a href="#"><i class="fas fa-star" onmouseover="changeIconeColor(this)" onmouseout="backIconeColor(this)"></i>Favoritos</a></li>
-                    <li><a href="#"><i class="fas fa-shopping-cart" onmouseover="changeIconeColor(this)" onmouseout="backIconeColor(this)"></i>Carrinho</a></li>
-                </ul>
-              </nav>
-        </div>
-        <!-- Fim do Menu Fixo -->
-        <!-- Inicio do Menu -->
-        <div id="main-menu">    
-            <nav id="bottom-menu">
-                <ul>
-                    <li><a href="product.html"><i class="fas fa-boxes" onmouseover="changeIconeColor(this)" onmouseout="backIconeColor(this)"></i>Produtos</a></li>
-                    <li><a href="our-stores.html"><i class="fas fa-store" onmouseover="changeIconeColor(this)" onmouseout="backIconeColor(this)"></i>Nossas lojas</a></li>
-                    <li class="right-spacer"><a href="contact.html"><i class="fas fa-address-card" onmouseover="changeIconeColor(this)" onmouseout="backIconeColor(this)"></i>Contato</a></li>
-                </ul>
-            </nav>
-        </div>
-        <!-- Fim do Menu -->
-    </header>
+    <?php
+        include('header.html');
+    ?>
     <!-- Fim do Cabeçalho -->
     <!-- Inicio do Separador -->
     <div class="separator-small">
@@ -56,22 +53,23 @@
     <div id="contact-form">
         <div id="forms">
             <h2 class="title-form">Entre em contato conosco</h2>
-            <form action="#" method="post">
+            <form action="" name="contact" method="post">
                 <fieldset>
                     <!-- Inicio do Grupo de campos Nome/ Sobrenome -->
                     <fieldset class="group">
                         <div class="field">
                             <label for="nome">Nome</label>
-                            <input type="text" id="nome" name="nome" style="width: 20em" value="" />
+                            <input type="text" id="nome" name="nome" style="width: 20em" required/>
                         </div>
                         <div class="field">
                             <label for="snome">Sobrenome</label>
-                            <input type="text" id="snome" name="snome" style="width: 20em" value="" />
+                            <input type="text" id="snome" name="snome" style="width: 20em" required/>
                         </div>
                     </fieldset>	
                     <!-- Fim do Grupo de campos Nome/ Sobrenome -->
                     <!-- Inicio do Elemento para escolher o Sexo -->
-                    <div class="field">
+
+                        <div class="field">
                         <label>Sexo</label>
                         <label class="checkbox">
                             <input type="radio" name="sexo" value="masculino" checked> Masculino
@@ -83,24 +81,26 @@
                             <input type="radio" name="sexo" value="outro"> Outro
                         </label>
                     </div>
+
                     <!-- Fim do Elemento para escolher o Sexo -->                
                     <!-- Inicio do Elemento de Email -->
                     <div class="field">
                         <label for="email">E-mail</label>
-                        <input type="text" id="email" name="email" style="width: 41em" value="" />
+                        <input type="text" id="email" name="email" style="width: 41em" required/>
                     </div>
                     <!-- Fim do Elemento de Email -->
                     <!-- Inicio do Elemento de Telefone -->
                     <div class="field">
                         <label for="telefone">Telefone</label>
-                        <input type="text" id="telefone" name="telefone" style="width: 20em"  value="" />
+                        <input type="text" id="telefone" name="telefone" style="width: 20em" required/>
                     </div>
                     <!-- Fim do Elemento de Telefone -->
                     <!-- Inicio do Grupo de campos Cidade/ Estado -->
-                    <fieldset class="group">
+
+                        <fieldset class="group">
                         <div class="field">
                             <label for="cidade">Cidade</label>
-                            <input type="text" id="cidade" name="cidade" style="width: 20em" value="" />
+                            <input type="text" id="cidade" name="cidade" style="width: 20em" required/>
                         </div>
                         <div class="field">
                             <label for="estado">Estado</label>
@@ -129,7 +129,7 @@
                                 <option value="RO">Rondônia</option>
                                 <option value="RR">Roraima</option>
                                 <option value="SC">Santa Catarina</option>
-                                <option value="SP">São Paulo</option>
+                                <option value="SP" selected>São Paulo</option>
                                 <option value="SE">Sergipe</option>
                                 <option value="TO">Tocantins</option>
                             </select>
@@ -137,21 +137,25 @@
                     </fieldset>
                     <!-- Fim do Grupo de campos Cidade/ Estado -->
                     <!-- Inicio do Elemento Mensagem -->
+    
                     <div class="field">
                         <label for="mensagem">Mensagem</label>
-                        <textarea rows="6" style="width: 41em" id="mensagem" name="mensagem"></textarea>
+                        <textarea rows="6" style="width: 41em" id="mensagem" name="mensagem" required></textarea>
                     </div>
+    
                     <!-- Fim do Elemento Mensagem -->
                     <!-- Inicio do Elemento Newsletter -->
+                    <!--
                     <div class="field">
                         <label>Newsletter</label>
                         <label class="checkbox">
                             <input type="checkbox" name="newsletter" value="1"> Gostaria de receber a Newsletter do Full Stack Eletro
                         </label>
                     </div>
+                    -->
                     <!-- Fim do Elemento Newsletter -->
                     <!-- Inicio do botão Enviar -->
-                    <button class="botao submit" type="submit" name="submit">Enviar</button>
+                    <button class="botao submit" type="submit" name="submit" value="Enviar">Enviar</button>
                     <!-- Fim do botão Enviar -->
                 </fieldset>
             </form>

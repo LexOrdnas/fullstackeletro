@@ -13,39 +13,9 @@
 </head>
 <body>
     <!-- Inicio do Cabeçalho -->
-    <header id="header">
-        <!-- Inicio do Menu Fixo 
-        <img src="../assets/image/logo.png" alt="logo" width="150">-->
-        <div id="menu-fixed">
-            <a href="index.html"> <img class="logo" src="./../assets/image/logo.png" alt="Full Stack Eletro" title="Full Stack Eletro"><h1>Full Stack Eletro</h1></a>
-            <button class="btn-menu"><i class="fa fa-bars fa-lg"></i></button>
-            <div class="search-container">
-                <form action="#">
-                  <input type="text" placeholder="Buscar.." name="search">
-                  <button type="submit"><i class="fas fa-search"></i></button>
-                </form>
-              </div>
-              <nav id="top-menu">
-                <ul>
-                    <li><a href="#"><i class="fas fa-user-circle" onmouseover="changeIconeColor(this)" onmouseout="backIconeColor(this)"></i><span style="text-decoration: underline;">Entrar</span></a></li>
-                    <li><a href="#"><i class="fas fa-star" onmouseover="changeIconeColor(this)" onmouseout="backIconeColor(this)"></i>Favoritos</a></li>
-                    <li><a href="#"><i class="fas fa-shopping-cart" onmouseover="changeIconeColor(this)" onmouseout="backIconeColor(this)"></i>Carrinho</a></li>
-                </ul>
-              </nav>
-        </div>
-        <!-- Fim do Menu Fixo -->
-        <!-- Inicio do Menu -->
-        <div id="main-menu">    
-            <nav id="bottom-menu">
-                <ul>
-                    <li><a href="product.html"><i class="fas fa-boxes" onmouseover="changeIconeColor(this)" onmouseout="backIconeColor(this)"></i>Produtos</a></li>
-                    <li><a href="our-stores.html"><i class="fas fa-store" onmouseover="changeIconeColor(this)" onmouseout="backIconeColor(this)"></i>Nossas lojas</a></li>
-                    <li class="right-spacer"><a href="contact.html"><i class="fas fa-address-card" onmouseover="changeIconeColor(this)" onmouseout="backIconeColor(this)"></i>Contato</a></li>
-                </ul>
-            </nav>
-        </div>
-        <!-- Fim do Menu -->
-    </header>
+    <?php
+        include('header.html');
+    ?>
     <!-- Fim do Cabeçalho -->
     <!-- Inicio da Apresentação -->
     <div class="welcome">
