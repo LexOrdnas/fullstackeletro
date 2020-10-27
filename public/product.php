@@ -1,13 +1,23 @@
+<?php
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $database = "fseletro";
+
+    // Criando a conexão
+    $conn = mysqli_connect($servername, $username, $password, $database);
+
+    // Verificando a conexão
+    if(!$conn){
+        die("A conexão falhou".mysqli_connect_error());
+    }
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Full Stack Eleto - Eletrodomésticos</title>
-    <meta name="description" content="Site para avaliação individual da Recode Pro 2020">
-    <meta name="keywords" content="Full Stack Eletro, Recode Pro 2020">
-    <meta name="robots" content="index, follow">
-    <meta name="author" content="Alexsandro da Silva Marques">
+    <title>Produtos - Full Stack Eleto</title>
     <!-- Ícone do Site -->
     <link rel="shortcut icon" href="../assets/image/icons/stop-red-icon.png" type="image/png">
     <!-- Estilos CSS -->
@@ -18,39 +28,9 @@
 </head>
 <body>
     <!-- Inicio do Cabeçalho -->
-    <header id="header">
-        <!-- Inicio do Menu Fixo 
-        <img src="../assets/image/logo.png" alt="logo" width="150">-->
-        <div id="menu-fixed">
-            <a href="index.html"> <img class="logo" src="./../assets/image/logo.png" alt="Full Stack Eletro" title="Full Stack Eletro"><h1>Full Stack Eletro</h1></a>
-            <button class="btn-menu"><i class="fa fa-bars fa-lg"></i></button>
-            <div class="search-container">
-                <form action="#">
-                  <input type="text" placeholder="Buscar.." name="search">
-                  <button type="submit"><i class="fas fa-search"></i></button>
-                </form>
-              </div>
-              <nav id="top-menu">
-                <ul>
-                    <li><a href="#"><i class="fas fa-user-circle" onmouseover="changeIconeColor(this)" onmouseout="backIconeColor(this)"></i><span style="text-decoration: underline;">Entrar</span></a></li>
-                    <li><a href="#"><i class="fas fa-star" onmouseover="changeIconeColor(this)" onmouseout="backIconeColor(this)"></i>Favoritos</a></li>
-                    <li><a href="#"><i class="fas fa-shopping-cart" onmouseover="changeIconeColor(this)" onmouseout="backIconeColor(this)"></i>Carrinho</a></li>
-                </ul>
-              </nav>
-        </div>
-        <!-- Fim do Menu Fixo -->
-        <!-- Inicio do Menu -->
-        <div id="main-menu">    
-            <nav id="bottom-menu">
-                <ul>
-                    <li><a href="product.html"><i class="fas fa-boxes" onmouseover="changeIconeColor(this)" onmouseout="backIconeColor(this)"></i>Produtos</a></li>
-                    <li><a href="our-stores.html"><i class="fas fa-store" onmouseover="changeIconeColor(this)" onmouseout="backIconeColor(this)"></i>Nossas lojas</a></li>
-                    <li class="right-spacer"><a href="contact.html"><i class="fas fa-address-card" onmouseover="changeIconeColor(this)" onmouseout="backIconeColor(this)"></i>Contato</a></li>
-                </ul>
-            </nav>
-        </div>
-        <!-- Fim do Menu -->
-    </header>
+    <?php
+        include('header.html');
+    ?>
     <!-- Fim do Cabeçalho -->
     <!-- Inicio da Apresentação -->
     <div class="welcome">
@@ -68,8 +48,74 @@
         data-flickity-bg-lazyload="https://images.pexels.com/photos/4682124/pexels-photo-4682124.jpeg?cs=srgb&dl=pexels-curtis-adams-4682124.jpg&fm=jpg"></div>
     </div>
     <!-- Fim do Banner -->
+    <!-- Inicio das Categorias -->
+    <aside id="category">
+        <div rowspan="5" valign="top" width="20%">
+            <p class="title-category">Categorias</p>
+            <ul class="list-category">
+                <li class="itens-category" onclick="showAll()">Todos</li>
+                <li class="itens-category" onclick="showCategory('refrigerator')">Geladeiras</li>
+                <li class="itens-category" onclick="showCategory('stove')">Fogões</li>
+                <li class="itens-category" onclick="showCategory('dishwasher')">Lava-Louças</li>
+                <li class="itens-category" onclick="showCategory('washing-machine')">Lavadora de Roupas</li>
+                <li class="itens-category" onclick="showCategory('micro-wave')">Micro-Ondas</li>
+            </ul>
+        </div>
+            <div class="box">
+                <div class="box linha-vertical">
+                </div>
+            </div>
+    </aside>
+    <!-- Fim das Categorias -->
+    <!-- Inicio do Conteúdo Principal -->
+    <main>
+        <article id="main-content">
+
+            <?php
+            $sql = "select * from product";
+            $result = $conn->query($sql);
+        
+            if ($result->num_rows > 0) {
+                while($rows = $result -> fetch_assoc()){
+            ?>
+            <div id="<?php echo $rows["categoria"]; ?>" class="block-product" onclick="noPageExists(alert)" onmouseover="colorChangeOver(this)" onmouseout="colorChangeOut(this)">
+                    <img class="product-image" src="<?php echo $rows["imagem"]; ?>" alt="Geladeira">
+                    <p class="product-title"><?php echo $rows["descricao"]; ?></p>
+                    <!--
+                    <p>02 Portas Frost Free</p>
+                    <p>454 Litros Painel Eletrônico Inox</p>
+                    -->
+                    <div class="price-block">
+                        <p class="strike"><?php echo $rows["preco"]; ?></p>
+                        <p class="featured-text"><?php echo $rows["preco_venda"]; ?></p>
+                    </div>
+                    <hr class="price-separator">
+                    <p class="sub-text">Até 12x de 299,99 sem juros</p>
+                </div>
+            <?php
+                }
+            } else {
+                echo "Nenhum produto cadastrado!";
+            }
+            ?>  
+                </div>
+        </article>
+    </main>
+    <!-- Fim do Conteúdo Principal -->
+    <!-- Inicio de Paginação -->
+    <div class="pagination">
+        <a href="#">&laquo;</a>
+        <a href="#" class="active">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">&raquo;</a>
+      </div>
+    <!-- Fim de Paginação -->
     <!-- Inicio do Separador -->
-    <div class="separator-large">
+    <div class="separator-medium">
 
     </div>
     <!-- Fim do Separador -->
@@ -80,7 +126,7 @@
         <p class="featured-text">Formas de pagamento</p>
         <img class="image-form-of-payment" src="../assets/image/formas-pagamento.png" alt="Formas de pagamento">
     </div>
-        <!-- Fim de Formas de Pagamento -->
+    <!-- Fim de Formas de Pagamento -->
         <!-- Inicio de Endereços -->
         <div id="address">
             <div class="locality">
@@ -118,13 +164,13 @@
              </div>        
          </div>
          <div id="bottom-footer">
-            <p>&copy;2020 - Todos os direitos reservados para Alexsandro Marques</p>
+            <p>Todos os direitos reservados para Alexsandro Marques</p>
          </div>
         <!-- Fim de Contatos -->
         </footer>
         <!-- Fim do Rodapé -->
-        <script src="https://kit.fontawesome.com/9fd7b899ce.js" crossorigin="anonymous"></script>
         <script src="../assets/scripts/function.js"></script>
+        <script src="https://kit.fontawesome.com/9fd7b899ce.js" crossorigin="anonymous"></script>
         <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
         <script src="https://unpkg.com/flickity-bg-lazyload@1/bg-lazyload.js"></script>
 </body>
