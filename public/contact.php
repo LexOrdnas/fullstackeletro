@@ -222,7 +222,7 @@
         <!-- Fim de Contatos -->
         </footer>
         <!-- Fim do Rodapé -->
-        <script src="../assets/scripts/function.js"></script>
-        <script src="https://kit.fontawesome.com/9fd7b899ce.js" crossorigin="anonymous"></script>
+        <cript src="../assets/scripts/function.js"></cript>
+        <cript src="https://kit.fontawesome.com/9fd7b899ce.js" crossorigin="anonymous"></cript>
 </body>
 </html>
