@@ -13,6 +13,8 @@
     <!-- Estilos CSS -->
     <link rel="stylesheet" href="../assets/styles/main.css">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <!-- Links da Fonte Padrão no site da Google -->
     <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <!-- Javascript -->
@@ -20,17 +22,27 @@
     <script src="../assets/scripts/function.js" defer></script>
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js" defer></script>
     <script src="https://unpkg.com/flickity-bg-lazyload@1/bg-lazyload.js" defer></script>
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
 </head>
 <body>
     <!-- Inicio do Cabeçalho -->
-    <?php
-        include('header.html');
-    ?>
+    <header>
+        <?php include('header.html'); ?>
+    </header>
     <!-- Fim do Cabeçalho -->
+    <!-- Inicio do Separador -->
+    <div class="separator-small">
+
+    </div>
+    <!-- Fim do Separador -->
     <!-- Inicio da Apresentação -->
-    <div class="welcome">
-        <h2>Sejá bem-vindo(a) á Full Stack Eletro ! 😁</h2>
-        <p>Aqui em nossa loja, <i>programadores tem desconto</i> nos produtos em sua casa!</p>
+    <div class="container text-center my-5">
+        <p class="h2">Sejá bem-vindo(a) á Full Stack Eletro ! 😁</p>
+        <p class="h4">Aqui em nossa loja, <i class="text-danger">programadores tem desconto</i> nos produtos em sua casa!</p>
     </div>
     <!-- Fim da Apresentação -->
     <!-- Inicio do Banner -->
@@ -44,59 +56,22 @@
     </div>
     <!-- Fim do Banner -->
     <!-- Inicio do Separador -->
-    <div class="separator-large">
+    <div class="separator-medium">
+
+    </div>
+    <!-- Fim do Separador -->
+    <main class="container">
+        <img class="rounded mx-auto d-block" src="../assets/image/image-index.jpg" width="400px" alt="">
+    </main>
+    <!-- Inicio do Separador -->
+    <div class="separator-small">
 
     </div>
     <!-- Fim do Separador -->
     <!-- Inicio do Rodapé -->
-    <footer>
-    <!-- Inicio de Formas de Pagamento -->
-    <div id="forms-payment">
-        <p class="featured-text">Formas de pagamento</p>
-        <img class="image-form-of-payment" src="../assets/image/formas-pagamento.png" alt="Formas de pagamento">
-    </div>
-        <!-- Fim de Formas de Pagamento -->
-        <!-- Inicio de Endereços -->
-        <div id="address">
-            <div class="locality">
-                <h3>Rio de Janeiro</h3>
-                <p>Avenida de São João, 500</p>
-                <p>10° Andar, Prédio AA</p>
-                <p>Centro</p>
-                <p>11 4512-4554</p>
-            </div>
-            <div class="locality">
-                <h3>Rio de Janeiro</h3>
-                <p>Avenida de São João, 500</p>
-                <p>10° Andar, Prédio AA</p>
-                <p>Centro</p>
-                <p>11 4512-4554</p>
-            </div>
-            <div class="locality">
-                <h3>Rio de Janeiro</h3>
-                <p>Avenida de São João, 500</p>
-                <p>10° Andar, Prédio AA</p>
-                <p>Centro</p>
-                <p>11 4512-4554</p>
-            </div>
-        </div>
-        <!-- Fim de Endereços -->
-        <!-- Inicio de Contatos -->
-        <div id="contact">
-             <div>
-                 <img src="../assets/image/icons/email.png" alt="E-mail">
-                 <p>contato@fullstackeletro.com</p>
-             </div>
-             <div class="locality">
-                 <img src="../assets/image/icons/whatsapp.png" alt="whatsapp">
-                 <p>(11) 99999-9999</p>
-             </div>        
-         </div>
-         <div id="bottom-footer">
-            <p>&copy;2020 - Todos os direitos reservados para Alexsandro Marques</p>
-         </div>
-        <!-- Fim de Contatos -->
-        </footer>
-        <!-- Fim do Rodapé -->
+    <?php
+        include('footer.html');
+    ?>
+    <!-- Fim do Rodapé -->
 </body>
 </html>
