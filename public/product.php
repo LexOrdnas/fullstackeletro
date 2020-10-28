@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <!-- Links da Fonte Padrão no site da Google -->
     <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<<<<<<< HEAD
     <!-- Bootstrap CSS-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <!-- JavaScript -->
@@ -51,6 +52,19 @@
     <div class="container text-center my-5">
         <p class="h2">Sejá bem-vindo(a) á Full Stack Eletro ! 😁</p>
         <p class="h4">Aqui em nossa loja, <i class="text-danger">programadores tem desconto</i> nos produtos em sua casa!</p>
+=======
+</head>
+<body>
+    <!-- Inicio do Cabeçalho -->
+    <?php
+        include('header.html');
+    ?>
+    <!-- Fim do Cabeçalho -->
+    <!-- Inicio da Apresentação -->
+    <div class="welcome">
+        <h2>Sejá bem-vindo(a) á Full Stack Eletro ! 😁</h2>
+        <p>Aqui em nossa loja, <i>programadores tem desconto</i> nos produtos em sua casa!</p>
+>>>>>>> ad9d5034300f7ab4939e46c62eb30384753bea07
     </div>
     <!-- Fim da Apresentação -->
     <!-- Inicio do Banner -->
@@ -130,6 +144,7 @@
       </div>
     <!-- Fim de Paginação -->
     <!-- Inicio do Separador -->
+<<<<<<< HEAD
     <div class="separator-medium"></div>
     <!-- Fim do Separador -->
     <!-- Inicio do Rodapé -->
@@ -137,5 +152,65 @@
         include('footer.html');
     ?>
     <!-- Fim do Rodapé -->
+=======
+    <div class="separator-medium">
+
+    </div>
+    <!-- Fim do Separador -->
+    <!-- Inicio do Rodapé -->
+    <footer>
+    <!-- Inicio de Formas de Pagamento -->
+    <div id="forms-payment">
+        <p class="featured-text">Formas de pagamento</p>
+        <img class="image-form-of-payment" src="../assets/image/formas-pagamento.png" alt="Formas de pagamento">
+    </div>
+    <!-- Fim de Formas de Pagamento -->
+        <!-- Inicio de Endereços -->
+        <div id="address">
+            <div class="locality">
+                <h3>Rio de Janeiro</h3>
+                <p>Avenida de São João, 500</p>
+                <p>10° Andar, Prédio AA</p>
+                <p>Centro</p>
+                <p>11 4512-4554</p>
+            </div>
+            <div class="locality">
+                <h3>Rio de Janeiro</h3>
+                <p>Avenida de São João, 500</p>
+                <p>10° Andar, Prédio AA</p>
+                <p>Centro</p>
+                <p>11 4512-4554</p>
+            </div>
+            <div class="locality">
+                <h3>Rio de Janeiro</h3>
+                <p>Avenida de São João, 500</p>
+                <p>10° Andar, Prédio AA</p>
+                <p>Centro</p>
+                <p>11 4512-4554</p>
+            </div>
+        </div>
+        <!-- Fim de Endereços -->
+        <!-- Inicio de Contatos -->
+        <div id="contact">
+             <div>
+                 <img src="../assets/image/icons/email.png" alt="E-mail">
+                 <p>contato@fullstackeletro.com</p>
+             </div>
+             <div class="locality">
+                 <img src="../assets/image/icons/whatsapp.png" alt="whatsapp">
+                 <p>(11) 99999-9999</p>
+             </div>        
+         </div>
+         <div id="bottom-footer">
+            <p>Todos os direitos reservados para Alexsandro Marques</p>
+         </div>
+        <!-- Fim de Contatos -->
+        </footer>
+        <!-- Fim do Rodapé -->
+        <script src="../assets/scripts/function.js"></script>
+        <script src="https://kit.fontawesome.com/9fd7b899ce.js" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+        <script src="https://unpkg.com/flickity-bg-lazyload@1/bg-lazyload.js"></script>
+>>>>>>> ad9d5034300f7ab4939e46c62eb30384753bea07
 </body>
 </html>
