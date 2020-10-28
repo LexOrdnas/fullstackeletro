@@ -29,18 +29,3 @@ $preview-color: #dddddd;
 @import 'partials/spacer';
 @import 'partials/text';
 @import 'partials/footer';
-
-/* Bloco de Boas vindas do site */
-.welcome {
-    padding-top: 50px;
-    text-align: center;
-    background-color: $background-color;
-    h2 {
-        padding-bottom: 10px;
-        font-size: 1.8rem;
-    }
-    p {
-        padding-bottom: 20px;
-        font-size: 1.4rem;
-    }
-}

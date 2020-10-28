@@ -22,164 +22,6 @@ body {
   background-color: #ffffff;
 }
 
-#header {
-  /*display: flex;*/
-  height: 100px;
-  width: 100%;
-  background-color: #e7566e;
-  /* Padrão */
-  /* Menu Fixo */
-  /* Estilo da lista do menu */
-}
-
-#header ul {
-  list-style: none;
-  font-size: 1.2rem;
-}
-
-#header #menu-fixed {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: fixed;
-  z-index: 999;
-  left: 0%;
-  right: 0%;
-  top: 0;
-  overflow: hidden;
-  height: 60px;
-  background-color: #e7566e;
-  /* Lista de links do menu fixo */
-}
-
-#header #menu-fixed .logo {
-  width: 150px;
-}
-
-#header #menu-fixed h1 {
-  font-size: 0;
-}
-
-#header #menu-fixed .btn-menu {
-  display: none;
-  width: 55px;
-  height: 55px;
-  float: right;
-  text-align: center;
-  color: white;
-  background-color: #e7566e;
-  cursor: pointer;
-}
-
-#header #menu-fixed #top-menu ul li {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  display: inline-block;
-}
-
-#header #menu-fixed #top-menu ul a {
-  width: 50px;
-  color: #ececec;
-  text-decoration: none;
-  font-size: 1.2rem;
-  margin-left: 20px;
-}
-
-#header #menu-fixed #top-menu ul i {
-  padding: 10px;
-}
-
-#header #main-menu #bottom-menu i {
-  padding: 10px;
-}
-
-#header #main-menu ul {
-  padding-top: 60px;
-  z-index: 999;
-  margin: 0px;
-  list-style: none;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-#header #main-menu ul a {
-  padding: 5px 5px 5px 5px;
-  margin-right: 20px;
-  /* visual do link */
-  color: #ececec;
-  text-decoration: none;
-  font-size: 1.2rem;
-}
-
-#header #main-menu ul a:hover {
-  color: #FFFFFF;
-}
-
-/* Separador do links principal da lista */
-.divider-li {
-  padding-right: 15%;
-}
-
-.search-container {
-  width: 40%;
-  min-width: 200px;
-}
-
-.search-container form {
-  text-align: center;
-}
-
-#header input[type="text"] {
-  padding: 6px;
-  font-size: 17px;
-  border: none;
-  border-radius: 5px;
-  width: 80%;
-  outline: none;
-}
-
-#header .search-container button {
-  padding: 6px 10px;
-  margin-right: 16px;
-  background: #ffffff;
-  font-size: 17px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  outline: none;
-}
-
-#header .search-container button:hover {
-  background: #e9e8e8;
-}
-
-@media screen and (max-width: 980px) {
-  #header {
-    display: inline;
-    height: 50px;
-  }
-  #main-menu, #top-menu, .search-container {
-    display: none;
-  }
-  #header #menu-fixed .btn-menu {
-    display: block;
-  }
-}
-
 /* Botão geral */
 .botao {
   background-color: #D90429;
@@ -245,135 +87,6 @@ body {
   text-decoration: underline;
 }
 
-/* conjunto de campo */
-fieldset {
-  border: 0;
-}
-
-/* Configurações dos componentes do Formulário */
-input,
-select,
-textarea,
-button {
-  font-size: 1em;
-}
-
-/* Configuração do Formulário */
-#contact-form {
-  display: -ms-grid;
-  display: grid;
-  /* Tipo de exibição */
-  -ms-grid-columns: (1fr);
-      grid-template-columns: repeat(2, 1fr);
-  /* 2 elementos na horizontal emm 1 vertical */
-  padding-bottom: 20px;
-  max-width: 100%;
-  margin: 0 auto;
-  grid-gap: 0px;
-  background-color: #ffffff;
-  place-items: center;
-  /* ID do Formulário */
-}
-
-#contact-form #forms {
-  width: 100%;
-  padding-left: 18%;
-}
-
-/* Campos */
-.field {
-  margin-bottom: 1em;
-}
-
-/* Textos que rotulam os campos */
-.field label {
-  margin-bottom: 0.5em;
-  color: #5a5a5a;
-  display: block;
-  font-size: 1.2rem;
-}
-
-/* Sustentação do conjunto de campos */
-fieldset.group .field {
-  float: left;
-  margin-right: 1em;
-}
-
-/* Configuração dos campos de entrada */
-.field input[type="text"],
-.field input[type="email"],
-.field input[type="url"],
-.field input[type="tel"],
-.field select,
-.field textarea {
-  padding: 0.3em;
-  border: 2px solid #f0e6e6;
-  border-radius: 5px;
-  -webkit-box-shadow: 2px 2px 2px rgba(77, 74, 74, 0.2);
-          box-shadow: 2px 2px 2px rgba(77, 74, 74, 0.2);
-  display: block;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  outline: none;
-}
-
-/* Campo de opção */
-.field select option {
-  padding-right: 1em;
-}
-
-/* Ação ao dar foco nos campos */
-.field input:focus,
-.field select:focus,
-.field textarea:focus {
-  background: #ffffff;
-  border: 2px solid #8D99AE;
-}
-
-/* Ação ao passar mouse nos campos */
-.field input:hover,
-.field select:hover,
-.field textarea:hover {
-  border: 2px solid #8D99AE;
-}
-
-/* Ação quando os campos são ativados */
-.field input:active,
-.field select:active,
-.field textarea:active {
-  border: 2px solid #8D99AE;
-}
-
-/* Campo de seleção da caixa */
-.field label.checkbox {
-  color: #757575;
-  display: inline-block;
-  margin-right: 1em;
-  font-size: 1rem;
-}
-
-/* Mudança de formato do mouse ao passar pelos elementos */
-.botao,
-select,
-label.checkbox {
-  cursor: pointer;
-}
-
-/* Imagem ao lado do Formulário */
-.image-form img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-  border-radius: 5px 0px 0px 5px;
-  opacity: 0.9;
-}
-
-/* Image de Formas de Pagamento */
-.image-form-of-payment {
-  width: 600px;
-  height: 100px;
-}
-
 .carousel {
   background: #ffffff;
   margin-top: 30px;
@@ -401,8 +114,8 @@ label.checkbox {
   display: -ms-grid;
   display: grid;
   /* Tipo de exibição do conteúdo */
-  -ms-grid-columns: (4fr);
-      grid-template-columns: repeat(3, 4fr);
+  -ms-grid-columns: (3fr)[3];
+      grid-template-columns: repeat(3, 3fr);
   /* 4 elementos horizontais e 3 verticais */
   max-width: 980px;
   padding-top: 70px;
@@ -544,6 +257,10 @@ h1, h1, h3, h4, h5, h6 {
   color: #2B2D42;
 }
 
+.title {
+  font-size: xx-large;
+}
+
 h1 {
   font-size: 2rem;
 }
@@ -567,74 +284,6 @@ h5 {
 
 h6 {
   font-size: 1rem;
-}
-
-/* Formas de Pagamento */
-#forms-payment {
-  background-color: #ffffff;
-  text-align: center;
-  padding: 50px 0px 20px 0px;
-  /* Texto Formas de Pagamento */
-}
-
-#forms-payment .featured-text {
-  color: #b90523;
-  font-size: 1.6rem;
-  padding-bottom: 20px;
-}
-
-/* Endereço */
-#address {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr);
-      grid-template-columns: repeat(3, 1fr);
-  padding-top: 50px;
-  padding-bottom: 50px;
-  padding-left: 20%;
-  max-width: 100%;
-  margin: 0 auto;
-  grid-gap: 10px;
-  background-color: #f0f0f0;
-}
-
-/* Tamanho dos blocos de Endereço */
-.locality {
-  width: 33%;
-}
-
-/* Contatos */
-#contact {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr);
-      grid-template-columns: repeat(2, 1fr);
-  padding-top: 20px;
-  padding-bottom: 20px;
-  max-width: 100%;
-  margin: 0 auto;
-  grid-gap: 0px;
-  background-color: #f0f0f0;
-  place-items: center;
-}
-
-/* Tamanho dos blocos de Endereço */
-#contact div {
-  width: 25%;
-}
-
-/* Imagens de Endereço */
-#contact img {
-  width: 50px;
-  height: 50px;
-}
-
-/* Rodapé */
-#bottom-footer {
-  background-color: #e7566e;
-  text-align: center;
-  padding: 10px 0px 10px 0px;
-  color: #FFFFFF;
 }
 
 /* Paginação */
@@ -666,22 +315,5 @@ h6 {
 /* Ao mover o mouse sobre os links */
 .pagination a:hover:not(.active) {
   background-color: #e9e9e9;
-}
-
-/* Bloco de Boas vindas do site */
-.welcome {
-  padding-top: 50px;
-  text-align: center;
-  background-color: #ffffff;
-}
-
-.welcome h2 {
-  padding-bottom: 10px;
-  font-size: 1.8rem;
-}
-
-.welcome p {
-  padding-bottom: 20px;
-  font-size: 1.4rem;
 }
 /*# sourceMappingURL=main.css.map */

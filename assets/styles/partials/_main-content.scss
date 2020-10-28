@@ -1,7 +1,7 @@
 /* Conteúdo principal */
 #main-content {
     display: grid; /* Tipo de exibição do conteúdo */
-    grid-template-columns: repeat(3, 4fr); /* 4 elementos horizontais e 3 verticais */
+    grid-template-columns: repeat(3, 3fr); /* 4 elementos horizontais e 3 verticais */
     max-width: 980px;
     padding-top: 70px;
     margin: auto 450px;
